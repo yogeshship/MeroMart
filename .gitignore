@@ -1,12 +1,12 @@
 # Eclipse
-.metadata/
 .settings/
-*.class
+.classpath
+.project
 
 # Build
 build/
 
-# Mac
+# OS
 .DS_Store
 
 # Logs
