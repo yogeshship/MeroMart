@@ -1,33 +1,33 @@
-# MeroMart
+# MeroMart Project
 
-MeroMart is a Java web application for grocery management built using JSP, Servlets, and MySQL.
+## Setup Instructions
 
-## Features
-- Contact form submission
-- MySQL database integration
-- JDBC connection
-- MVC-style package structure
+1. Clone the repository:
+   git clone https://github.com/yogeshship/MeroMart.git
 
-## Technologies Used
-- Java
-- JSP
-- Servlets
-- MySQL / MariaDB
-- Apache Tomcat
-- Eclipse
+2. Start XAMPP:
+   - Start Apache
+   - Start MySQL
 
-## Project Structure
-- `com.meromart.db` - database connection
-- `com.meromart.model` - model classes
-- `com.meromart.dao` - data access logic
-- `com.meromart.controller` - servlet controllers
-- `src/main/webapp` - JSP pages
+3. Setup Database:
+   - Open phpMyAdmin
+   - Create database: mero_mart_db
+   - Click Import
+   - Select file: database/mero_mart_db.sql
 
-## Current Working Module
-- Contact form → Servlet → DAO → Database
+4. Configure Database Connection:
+   Open DBConnection.java and update:
+   - MySQL port (3306 or 3307)
+   - Username (usually root)
+   - Password (if set)
 
-## How to Run
-1. Start MySQL
-2. Start Tomcat
-3. Open:
-   `http://localhost:8080/MeroMart/contact.jsp`
+5. Run Project:
+   - Import into Eclipse
+   - Run on Tomcat
+
+6. Open in browser:
+   http://localhost:8080/MeroMart/contact.jsp
+
+7. Test:
+   - Submit contact form
+   - Check data in contact_messages table
