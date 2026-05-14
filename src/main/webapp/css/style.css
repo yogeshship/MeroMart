@@ -481,3 +481,24 @@ button:hover {
         padding: 35px 25px;
     }
 }
+.inline-success {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #E5F3EE;
+    color: #006F55;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.inline-success svg {
+    width: 16px;
+    height: 16px;
+    stroke: #006F55;
+    stroke-width: 2.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
