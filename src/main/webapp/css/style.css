@@ -1,0 +1,483 @@
+/* Basic setup */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F4EFE6;
+    color: #111111;
+}
+
+/* Main layout */
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background-color: #006F55;
+    padding: 35px 20px;
+    color: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 45px;
+    color: #ffffff;
+}
+
+.sidebar-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #BFE3D6;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.sidebar nav a,
+.sidebar-bottom a {
+    display: block;
+    text-decoration: none;
+    color: #DDEFE8;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 13px 15px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover,
+.sidebar-bottom a:hover {
+    background-color: #3C9B7A;
+    color: #ffffff;
+}
+
+.sidebar-bottom {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
+    border-top: 1px solid rgba(221, 239, 232, 0.4);
+    padding-top: 25px;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 240px;
+    padding: 55px 60px;
+    width: calc(100% - 240px);
+}
+
+.section-label {
+    color: #006F55;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin: 0 0 10px;
+    color: #111111;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #6B7280;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+/* Card style */
+.form-card,
+.small-card,
+.support-card,
+.overview-card,
+.info-card,
+.features-card,
+.database-card {
+    background-color: #ffffff;
+    border: 1px solid #E5E1D8;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.form-card h2,
+.small-card h2,
+.support-card h2,
+.overview-card h2,
+.info-card h2,
+.features-card h2,
+.database-card h2 {
+    font-family: Georgia, serif;
+    margin-top: 0;
+    color: #111111;
+}
+
+.form-card p,
+.small-card p,
+.overview-card p,
+.info-card p,
+.features-card p,
+.database-card p {
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+/* Contact page */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 30px;
+}
+
+form {
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111111;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #E5E1D8;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    color: #111111;
+    background-color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9CA3AF;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #006F55;
+}
+
+textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 22px;
+    background-color: #006F55;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005944;
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.inline-success {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #006F55;
+    font-size: 14px;
+}
+
+.inline-success svg {
+    width: 16px;
+    height: 16px;
+    stroke: #006F55;
+    stroke-width: 2.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.error-message {
+    background-color: #FDECEC;
+    color: #B00020;
+    padding: 12px 14px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.success-message {
+    background-color: #E5F3EE;
+    color: #006F55;
+    padding: 12px 14px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Right cards */
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.contact-info-item p {
+    margin: 0;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    color: #006F55;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contact-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: #006F55;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #E5F3EE;
+    color: #006F55;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.badge-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge-with-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke: #006F55;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Support section */
+.support-card {
+    margin-top: 30px;
+}
+
+.support-items {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.support-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #F4EFE6;
+    color: #006F55;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+}
+
+.support-box svg {
+    width: 22px;
+    height: 22px;
+    stroke: #006F55;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* About page */
+.overview-card {
+    margin-bottom: 30px;
+}
+
+.overview-card h2 {
+    font-size: 28px;
+}
+
+.three-card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.info-card h2 {
+    color: #006F55;
+}
+
+.card-heading-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.card-heading-row h2 {
+    margin: 0;
+    color: #006F55;
+}
+
+.icon-circle {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #006F55;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #006F55;
+    flex-shrink: 0;
+}
+
+.icon-circle svg {
+    width: 26px;
+    height: 26px;
+    stroke: #006F55;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.features-card {
+    margin-bottom: 30px;
+}
+
+.features-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.features-row > div {
+    border-right: 1px solid #E5E1D8;
+    padding-right: 20px;
+}
+
+.features-row > div:last-child {
+    border-right: none;
+}
+
+.feature-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #006F55;
+    flex-shrink: 0;
+}
+
+.feature-icon svg {
+    width: 30px;
+    height: 30px;
+    stroke: #006F55;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.features-row h3 {
+    color: #006F55;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.database-card h2 {
+    color: #006F55;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+    .content-grid,
+    .three-card-row,
+    .features-row {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar-bottom {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 30px;
+    }
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 35px 25px;
+    }
+}

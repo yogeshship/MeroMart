@@ -2,13 +2,17 @@ package com.meromart.model;
 
 public class Contact {
 
+    // Variables to store contact form data
     private String name;
     private String email;
     private String subject;
     private String message;
 
-    public Contact() {}
+    // Default constructor
+    public Contact() {
+    }
 
+    // Constructor with values
     public Contact(String name, String email, String subject, String message) {
         this.name = name;
         this.email = email;
@@ -16,6 +20,7 @@ public class Contact {
         this.message = message;
     }
 
+    // Getter and setter for name
     public String getName() {
         return name;
     }
@@ -24,6 +29,7 @@ public class Contact {
         this.name = name;
     }
 
+    // Getter and setter for email
     public String getEmail() {
         return email;
     }
@@ -32,6 +38,7 @@ public class Contact {
         this.email = email;
     }
 
+    // Getter and setter for subject
     public String getSubject() {
         return subject;
     }
@@ -40,6 +47,7 @@ public class Contact {
         this.subject = subject;
     }
 
+    // Getter and setter for message
     public String getMessage() {
         return message;
     }
